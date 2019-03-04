@@ -31,6 +31,10 @@ class ApplicationController < Sinatra::Base
     redirect "/articles/#{@article.id}"
   end
 
+  delete '/articles/:id/delete' do
+    Article.delete(params["id"])
+  end
+
   post '/articles' do
     @article = Article.create(title: params["title"], content: params["content"])
     redirect "/articles/#{@article.id}"
