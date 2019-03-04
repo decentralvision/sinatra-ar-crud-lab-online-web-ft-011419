@@ -1,4 +1,7 @@
 <%= @article.title%>
 <%= @article.content%>
 <form method="post" action="patch '/articles/:id'">
+  <input id="title" type="text" name="title">
+  <input id="content" type="text" name="content">
+  <button type="submit" value="submit">Submit</button>
 </form>
