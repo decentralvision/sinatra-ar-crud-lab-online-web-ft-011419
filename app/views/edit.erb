@@ -1,6 +1,6 @@
 <%= @article.title%>
 <%= @article.content%>
-<form method="post" action="/models/<%= @article.id %>">
+<form method="post" action="/articles/<%= @article.id %>">
   <input id="title" type="text" name="title">
   <input id="content" type="text" name="content">
   <button type="submit" value="submit">Submit</button>
